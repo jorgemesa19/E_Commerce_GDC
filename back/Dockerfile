@@ -5,7 +5,7 @@ FROM node:14.17.0-alpine3.13
 WORKDIR /app
 
 # Copia el código de la aplicación al contenedor
-COPY ./back .
+COPY ./ .
 
 # Instala las dependencias del proyecto
 RUN npm install
