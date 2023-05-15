@@ -12,13 +12,20 @@ export class NavComponent {
   public id:any;
   public user : any = undefined;
   public user_lc : any = undefined;  
-
+  public config_global : any = {};
 
   constructor(
     private _clienteService: ClienteService,
     private _router:Router
 
   ) { 
+    this._clienteService.obtener_config_publico().subscribe(
+      response=>{
+        this.config_global = response.data;
+        console.log(this.config_global);
+        
+      }
+    )
     this.token = localStorage.getItem('token');
     this.id = localStorage.getItem('_id'); 
 
