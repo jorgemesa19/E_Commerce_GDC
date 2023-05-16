@@ -46,13 +46,26 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
+    - name: Extract metadata (tags, labels) for Docker
+      id: meta1
+      uses: docker/metadata-action@v4
+      with:
+        images: jorgemesa19/ecommerce:admin01
+
     - name: Build and push Docker image 1
       uses: docker/build-push-action@v2
       with:
         context: ./admin
         dockerfile: Dockerfile
         push: true
-        tags: jorgemesa19/ecommerce:admin01
+        tags: ${{ steps.meta1.outputs.tags }}
+        labels: ${{ steps.meta1.outputs.labels }}
+
+    - name: Extract metadata (tags, labels) for Docker
+      id: meta2
+      uses: docker/metadata-action@v4
+      with:
+        images: jorgemesa19/ecommerce:back01
 
     - name: Build and push Docker image 2
       uses: docker/build-push-action@v2
@@ -60,7 +73,14 @@ jobs:
         context: ./back
         dockerfile: Dockerfile
         push: true
-        tags: jorgemesa19/ecommerce:back01
+        tags: ${{ steps.meta2.outputs.tags }}
+        labels: ${{ steps.meta2.outputs.labels }}
+
+    - name: Extract metadata (tags, labels) for Docker
+      id: meta3
+      uses: docker/metadata-action@v4
+      with:
+        images: jorgemesa19/ecommerce:tienda01
 
     - name: Build and push Docker image 3
       uses: docker/build-push-action@v2
@@ -68,4 +88,5 @@ jobs:
         context: ./tienda
         dockerfile: Dockerfile
         push: true
-        tags: jorgemesa19/ecommerce:tienda01
+        tags: ${{ steps.meta2.outputs.tags }}
+        labels: ${{ steps.meta2.outputs.labels }}
