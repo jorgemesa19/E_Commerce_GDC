@@ -28,6 +28,8 @@ api.post('/registro_inventario_producto_admin',auth.auth,productoController.regi
 
 
 api.get('/obtener_reviews_producto_publico/:id',productoController.obtener_reviews_producto_publico);
+api.get('/listar_productos_publico/:filtro?',productoController.listar_productos_publico);
+
 
 
 
