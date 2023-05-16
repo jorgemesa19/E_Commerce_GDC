@@ -301,6 +301,14 @@ const obtener_reviews_producto_publico = async function(req,res){
     res.status(200).send({data: reviews});
 }
 
+const listar_productos_publico = async function(req,res){
+    var filtro = req.params['filtro'];
+
+    let reg = await Producto.find({titulo: new RegExp(filtro, 'i')}).sort({createdAt:-1});
+    res.status(200).send({data: reg});
+}
+
+
 
 module.exports = {
     registro_producto_admin,
@@ -315,6 +323,7 @@ module.exports = {
     actualizar_producto_variedades_admin,
     agregar_imagen_galeria_admin,
     eliminar_imagen_galeria_admin,
-    obtener_reviews_producto_publico
+    obtener_reviews_producto_publico,
+    listar_productos_publico
      
 }
