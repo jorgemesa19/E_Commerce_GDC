@@ -12,7 +12,7 @@ RUN npm install
 RUN npm install -g @angular/cli
 
 # Expone el puerto
-EXPOSE 4201
+EXPOSE 4200
 
 # Define el comando de inicio de la aplicación
-CMD ["ng", "serve"]
+CMD ["ng", "serve", "--host", "0.0.0.0"]
