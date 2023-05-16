@@ -12,9 +12,6 @@ import { LoginComponent } from './components/login/login.component';
 import { PerfilComponent } from './components/usuario/perfil/perfil.component';
 import { SiderbarComponent } from './components/usuario/siderbar/siderbar.component';
 import { IndexProductoComponent } from './components/productos/index-producto/index-producto.component';
-import { NgbPaginationModule } from "@ng-bootstrap/ng-bootstrap";
-import { ShowProductoComponent } from './components/productos/show-producto/show-producto.component';
-
 
 
 @NgModule({
@@ -26,8 +23,7 @@ import { ShowProductoComponent } from './components/productos/show-producto/show
     LoginComponent,
     PerfilComponent,
     SiderbarComponent,
-    IndexProductoComponent,
-    ShowProductoComponent
+    IndexProductoComponent
 
   ],
   imports: [
@@ -35,8 +31,7 @@ import { ShowProductoComponent } from './components/productos/show-producto/show
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    routing,
-    NgbPaginationModule
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
