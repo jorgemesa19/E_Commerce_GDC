@@ -2,9 +2,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   build:
@@ -23,9 +23,7 @@ jobs:
         node-options: '--max-old-space-size=4096'
 
     - name: Change directory to back
-      run: cd back; ls
-
-    - run: cd back; npm install
+      run: cd back; npm install
 
     - name: Verify database connection
       run: cd back; node ./scripts/verify-db-connection.js
