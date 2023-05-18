@@ -26,9 +26,15 @@ api.delete('/eliminar_inventario_producto_admin/:id',auth.auth,productoControlle
 api.post('/registro_inventario_producto_admin',auth.auth,productoController.registro_inventario_producto_admin);
 
 
+//PUBLICOS
+
+api.get('/listar_productos_publico/:filtro?',productoController.listar_productos_publico);
+api.get('/obtener_productos_slug_publico/:slug',productoController.obtener_productos_slug_publico);
+api.get('/listar_productos_recomendados_publico/:categoria',productoController.listar_productos_recomendados_publico);
+
+
 
 api.get('/obtener_reviews_producto_publico/:id',productoController.obtener_reviews_producto_publico);
-api.get('/listar_productos_publico/:filtro?',productoController.listar_productos_publico);
 
 
 

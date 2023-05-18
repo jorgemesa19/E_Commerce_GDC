@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { GLOBAL } from 'src/app/services/GLOBAL';
 import { ClienteService } from 'src/app/services/cliente.service';
+declare var $:any;
+
 
 @Component({
   selector: 'app-nav',
@@ -13,6 +16,10 @@ export class NavComponent {
   public user : any = undefined;
   public user_lc : any = undefined;  
   public config_global : any = {};
+  public op_cart = false;
+
+  public carrito_arr : Array<any> = [];
+  public url:any;
 
   constructor(
     private _clienteService: ClienteService,
@@ -26,6 +33,7 @@ export class NavComponent {
         
       }
     )
+    this.url = GLOBAL.url;
     this.token = localStorage.getItem('token');
     this.id = localStorage.getItem('_id'); 
 
@@ -59,6 +67,16 @@ export class NavComponent {
       window.location.reload();
       localStorage.clear();
       this._router.navigate(['/']);
+    }
+
+    op_modalcart(){
+      if(!this.op_cart){
+        this.op_cart = true;
+        $('#cart').addClass('show');
+      }else{
+        this.op_cart = false;
+        $('#cart').removeClass('show');
+      }
     }
 
     
