@@ -15,17 +15,22 @@ export class NavComponent {
   public id:any;
   public user : any = undefined;
   public user_lc : any = undefined;  
+<<<<<<< HEAD
   public config_global : any = {};
   public op_cart = false;
 
   public carrito_arr : Array<any> = [];
   public url:any;
+=======
+
+>>>>>>> master
 
   constructor(
     private _clienteService: ClienteService,
     private _router:Router
 
   ) { 
+<<<<<<< HEAD
     this._clienteService.obtener_config_publico().subscribe(
       response=>{
         this.config_global = response.data;
@@ -34,6 +39,8 @@ export class NavComponent {
       }
     )
     this.url = GLOBAL.url;
+=======
+>>>>>>> master
     this.token = localStorage.getItem('token');
     this.id = localStorage.getItem('_id'); 
 

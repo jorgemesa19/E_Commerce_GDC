@@ -302,6 +302,7 @@ const eliminar_imagen_galeria_admin = async function(req,res){
 //-------------------Metodos publicos del sistema es decir los que neceistamos para la pag principal
 
 
+<<<<<<< HEAD
 const listar_productos_publico = async function(req,res){
     var filtro = req.params['filtro'];
 
@@ -340,6 +341,8 @@ const obtener_reviews_producto_publico = async function(req,res){
 }
 
 
+=======
+>>>>>>> master
 
 module.exports = {
     registro_producto_admin,
@@ -354,12 +357,15 @@ module.exports = {
     actualizar_producto_variedades_admin,
     agregar_imagen_galeria_admin,
     eliminar_imagen_galeria_admin,
+<<<<<<< HEAD
     listar_productos_publico,
     obtener_productos_slug_publico,
     listar_productos_recomendados_publico,
 
 
 
+=======
+>>>>>>> master
     obtener_reviews_producto_publico
      
 }

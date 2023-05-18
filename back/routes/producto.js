@@ -35,7 +35,10 @@ api.get('/listar_productos_recomendados_publico/:categoria',productoController.l
 
 
 api.get('/obtener_reviews_producto_publico/:id',productoController.obtener_reviews_producto_publico);
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 
 
 
