@@ -14,6 +14,8 @@ import { SiderbarComponent } from './components/usuario/siderbar/siderbar.compon
 import { IndexProductoComponent } from './components/productos/index-producto/index-producto.component';
 import { NgbPaginationModule } from "@ng-bootstrap/ng-bootstrap";
 import { ShowProductoComponent } from './components/productos/show-producto/show-producto.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
+import { DireccionesComponent } from './components/usuario/direcciones/direcciones.component';
 
 
 
@@ -27,7 +29,9 @@ import { ShowProductoComponent } from './components/productos/show-producto/show
     PerfilComponent,
     SiderbarComponent,
     IndexProductoComponent,
-    ShowProductoComponent
+    ShowProductoComponent,
+    CarritoComponent,
+    DireccionesComponent
 
   ],
   imports: [

@@ -26,7 +26,7 @@ export class ShowProductoComponent implements OnInit {
     cantidad: 1
   };
   public btn_cart = false;
-  // public socket = io('http://localhost:4201');
+  public socket = io('http://localhost:4201');
 
   public descuento_activo : any = undefined;
   public reviews :Array<any> = [];
@@ -231,7 +231,7 @@ export class ShowProductoComponent implements OnInit {
                     position: 'topRight',
                     message: 'Se agregó el producto al carrito.'
                 });
-                // this.socket.emit('add-carrito-add',{data:true});
+                this.socket.emit('add-carrito-add',{data:true});
                 this.btn_cart =false;
               }
             }

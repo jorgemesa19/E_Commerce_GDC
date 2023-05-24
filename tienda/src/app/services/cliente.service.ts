@@ -18,6 +18,11 @@ export class ClienteService {
     this.url = GLOBAL.url;
   }
 
+  obtener_direccion_principal_cliente(id:any,token:any):Observable<any>{
+    let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+    return this._http.get(this.url+'obtener_direccion_principal_cliente/'+id,{headers:headers});
+  }
+
   login_cliente(data:any):Observable<any>{
     let headers = new HttpHeaders().set('Content-Type','application/json');
     return this._http.post(this.url+'login_cliente',data,{headers:headers});
@@ -80,6 +85,119 @@ export class ClienteService {
   agregar_carrito_cliente(data:any,token:any):Observable<any>{
     let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
     return this._http.post(this.url+'agregar_carrito_cliente',data,{headers:headers});
+  }
+  obtener_carrito_cliente(id:any,token:any):Observable<any>{
+    let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+    return this._http.get(this.url+'obtener_carrito_cliente/'+id,{headers:headers});
+  }
+
+  eliminar_carrito_cliente(id:any,token:any):Observable<any>{
+    let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+    return this._http.delete(this.url+'eliminar_carrito_cliente/'+id,{headers:headers});
+  }
+
+  registro_direccion_cliente(data:any,token:any):Observable<any>{
+    let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+    return this._http.post(this.url+'registro_direccion_cliente',data,{headers:headers});
+  }
+
+  obtener_direccion_todos_cliente(id:any,token:any):Observable<any>{
+    let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+    return this._http.get(this.url+'obtener_direccion_todos_cliente/'+id,{headers:headers});
+  }
+
+  cambiar_direccion_principal_cliente(id:any,cliente:any,token:any):Observable<any>{
+    let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+    return this._http.put(this.url+'cambiar_direccion_principal_cliente/'+id+'/'+cliente,{data:true},{headers:headers});
+  }
+
+  registro_compra_cliente(data:any,token:any):Observable<any>{
+    let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+    return this._http.post(this.url+'registro_compra_cliente',data,{headers:headers});
+  }
+
+
+
+
+
+
+
+
+
+  get_token_culqi(data:any):Observable<any>{
+    let headers = new HttpHeaders()
+    .set('Content-Type','application/json')
+    .set('Authorization','Bearer pk_test_0b07aceaa3de8c43');
+    return this._http.post('https://secure.culqi.com/v2/tokens',data,{headers:headers});
+  }
+  
+  get_charge_culqi(data:any):Observable<any>{
+    let headers = new HttpHeaders()
+    .set('Content-Type','application/json')
+    .set('Authorization','Bearer sk_test_56683314fd8a5328');
+    return this._http.post('https://api.culqi.com/v2/charges',data,{headers:headers});
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  enviar_correo_compra_cliente(id:any,token:any):Observable<any>{
+    let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+    return this._http.get(this.url+'enviar_correo_compra_cliente/'+id,{headers:headers});
+  }
+
+  validar_cupon_admin(cupon:any,token:any):Observable<any>{
+    let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+    return this._http.get(this.url+'validar_cupon_admin/'+cupon,{headers:headers});
+  }
+
+
+  obtener_ordenes_cliente(id:any,token:any):Observable<any>{
+    let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+    return this._http.get(this.url+'obtener_ordenes_cliente/'+id,{headers:headers});
+  }
+  obtener_detalles_ordenes_cliente(id:any,token:any):Observable<any>{
+    let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+    return this._http.get(this.url+'obtener_detalles_ordenes_cliente/'+id,{headers:headers});
+  }
+
+  emitir_review_producto_cliente(data:any,token:any):Observable<any>{
+    let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+    return this._http.post(this.url+'emitir_review_producto_cliente',data,{headers:headers});
+  }
+
+  obtener_review_producto_cliente(id:any):Observable<any>{
+    let headers = new HttpHeaders().set('Content-Type','application/json');
+    return this._http.get(this.url+'obtener_review_producto_cliente/'+id,{headers:headers});
+  }
+
+  obtener_reviews_cliente(id:any,token:any):Observable<any>{
+    let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+    return this._http.get(this.url+'obtener_reviews_cliente/'+id,{headers:headers});
   }
 
 

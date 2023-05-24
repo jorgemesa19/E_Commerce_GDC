@@ -1,0 +1,133 @@
+
+[
+  {
+    "id": "010101",
+    "name": "París",
+    "province_id": "0101",
+    "department_id": "01"
+  },
+  {
+    "id": "010102",
+    "name": "La Madera",
+    "province_id": "0101",
+    "department_id": "01"
+  },
+  {
+    "id": "010103",
+    "name": "Altos de Niquía",
+    "province_id": "0101",
+    "department_id": "01"
+  },
+  {
+    "id": "010104",
+    "name": "Niquía",
+    "province_id": "0101",
+    "department_id": "01"
+  },
+  
+  {
+    "id": "010201",
+    "name": "Santa Catalina",
+    "province_id": "0102",
+    "department_id": "01"
+  },
+  {
+    "id": "010202",
+    "name": "Las Margaritas",
+    "province_id": "0102",
+    "department_id": "01"
+  },
+  {
+    "id": "010203",
+    "name": "San Pio X",
+    "province_id": "0102",
+    "department_id": "01"
+  },
+  
+  {
+    "id": "010301",
+    "name": "Poblado",
+    "province_id": "0103",
+    "department_id": "01"
+  },
+  {
+    "id": "010302",
+    "name": "Laureles",
+    "province_id": "0103",
+    "department_id": "01"
+  },
+  {
+    "id": "010303",
+    "name": "Manrique",
+    "province_id": "0103",
+    "department_id": "01"
+  },
+  {
+    "id": "010304",
+    "name": "Belen",
+    "province_id": "0103",
+    "department_id": "01"
+  },
+  {
+    "id": "010305",
+    "name": "Aranjuez",
+    "province_id": "0103",
+    "department_id": "01"
+  },
+  {
+    "id": "010306",
+    "name": "Buenos Aires",
+    "province_id": "0103",
+    "department_id": "01"
+  },
+  {
+    "id": "010307",
+    "name": "Guayabal",
+    "province_id": "0103",
+    "department_id": "01"
+  },
+  {
+    "id": "010308",
+    "name": "Robledo",
+    "province_id": "0103",
+    "department_id": "01"
+  },
+  
+  {
+    "id": "010401",
+    "name": "La doctora",
+    "province_id": "0104",
+    "department_id": "01"
+  },
+  {
+    "id": "010402",
+    "name": "Las lomitas",
+    "province_id": "0104",
+    "department_id": "01"
+  },
+  {
+    "id": "010403",
+    "name": "San jose",
+    "province_id": "0104",
+    "department_id": "01"
+  },
+  {
+    "id": "010501",
+    "name": "Loma de Las Brujas",
+    "province_id": "0105",
+    "department_id": "01"
+  },
+  {
+    "id": "010502",
+    "name": "Las palmas",
+    "province_id": "0105",
+    "department_id": "01"
+  },
+  {
+    "id": "010503",
+    "name": "San jose",
+    "province_id": "0105",
+    "department_id": "01"
+  }
+  
+]
