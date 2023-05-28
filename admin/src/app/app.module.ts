@@ -24,6 +24,8 @@ import { UpdateCuponComponent } from './components/cupones/update-cupon/update-c
 import { ConfigComponent } from './components/config/config.component';
 import { VariedadProductoComponent } from './components/productos/variedad-producto/variedad-producto.component';
 import { GaleriaProductoComponent } from './components/productos/galeria-producto/galeria-producto.component';
+import { IndexContactoComponent } from './components/contacto/index-contacto/index-contacto.component';
+
 
 import { ReviewsProductoComponent } from './components/productos/reviews-producto/reviews-producto.component';
 
@@ -51,6 +53,7 @@ import { ReviewsProductoComponent } from './components/productos/reviews-product
     GaleriaProductoComponent,
 
     ReviewsProductoComponent,
+    IndexContactoComponent
 
   ],
   imports: [

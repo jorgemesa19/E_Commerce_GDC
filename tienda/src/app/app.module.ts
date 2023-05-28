@@ -16,6 +16,7 @@ import { NgbPaginationModule } from "@ng-bootstrap/ng-bootstrap";
 import { ShowProductoComponent } from './components/productos/show-producto/show-producto.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { DireccionesComponent } from './components/usuario/direcciones/direcciones.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 
 
@@ -31,7 +32,8 @@ import { DireccionesComponent } from './components/usuario/direcciones/direccion
     IndexProductoComponent,
     ShowProductoComponent,
     CarritoComponent,
-    DireccionesComponent
+    DireccionesComponent,
+    ContactoComponent
 
   ],
   imports: [

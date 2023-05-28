@@ -3,6 +3,8 @@
 var Admin = require('../models/admin');
 var bcrypt = require ('bcrypt-nodejs');
 var jwt = require('../helpers/jwt');
+var Contacto = require('../models/contacto');
+
 
 const registro_admin = async function(req,res){
     var data = req.body;
@@ -57,7 +59,42 @@ const login_admin = async function(req, res){
     }
 }
 
+
+const obtener_mensajes_admin  = async function(req,res){
+    if(req.user){
+        if(req.user.role == 'admin'){
+
+            let reg = await Contacto.find().sort({createdAt:-1});
+            res.status(200).send({data:reg});
+
+        }else{
+            res.status(500).send({message: 'NoAccess'});
+        }
+    }else{
+        res.status(500).send({message: 'NoAccess'});
+    }
+}
+
+const cerrar_mensaje_admin  = async function(req,res){
+    if(req.user){
+        if(req.user.role == 'admin'){
+
+            let id = req.params['id'];
+
+            let reg = await Contacto.findByIdAndUpdate({_id:id},{estado: 'Cerrado'});
+            res.status(200).send({data:reg});
+
+        }else{
+            res.status(500).send({message: 'NoAccess'});
+        }
+    }else{
+        res.status(500).send({message: 'NoAccess'});
+    }
+}
+
 module.exports={
     registro_admin,
-    login_admin
+    login_admin,
+    obtener_mensajes_admin,
+    cerrar_mensaje_admin
 }

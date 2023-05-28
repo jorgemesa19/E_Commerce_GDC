@@ -45,7 +45,7 @@ export class NavComponent implements OnInit {
     
     if(this.token){
       this._clienteService.obtener_cliente_guest(this.id,this.token).subscribe(
-        response=>{
+        (response:any)=>{
           
           this.user = response.data;
           localStorage.setItem('user_data',JSON.stringify(this.user));
@@ -58,7 +58,7 @@ export class NavComponent implements OnInit {
           }
       
         },
-        error=>{
+        (error:any)=>{
 
           this.user = undefined;
         }
@@ -91,7 +91,7 @@ export class NavComponent implements OnInit {
     });
 
     this._guestService.obtener_descuento_activo().subscribe(
-      response=>{
+      (response:any)=>{
         
         if(response.data != undefined){
           this.descuento_activo = response.data[0];
